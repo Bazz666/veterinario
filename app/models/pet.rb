@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
-  has_many :pet_histories
+  has_many :pet_history
   belongs_to :client
   
 
