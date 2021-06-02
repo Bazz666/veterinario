@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2021_06_02_054946) do
 
   create_table "pet_histories", force: :cascade do |t|
     t.float "weight"
-    t.string "heigth"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.float "height"
+    t.string "description"
+    t.bigint "pet_id"
+    t.index ["pet_id"], name: "index_pet_histories_on_pet_id"
   end
 
   create_table "pets", force: :cascade do |t|
@@ -42,5 +42,6 @@ ActiveRecord::Schema.define(version: 2021_06_02_054946) do
   end
 
   add_foreign_key "clients", "pets"
+  add_foreign_key "pet_histories", "pets"
   add_foreign_key "pets", "clients"
 end
