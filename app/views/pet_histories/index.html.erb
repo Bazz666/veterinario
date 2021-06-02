@@ -13,6 +13,7 @@
   </thead>
 
   <tbody>
+  
     <% @pet_histories.each do |pet_history| %>
       <tr>
         <td><%= pet_history.weight %></td>
@@ -29,3 +30,5 @@
 <br>
 
 <%= link_to 'New Pet History', new_pet_history_path %>
+<br>
+<%= link_to 'volver a pets', root_path %>
