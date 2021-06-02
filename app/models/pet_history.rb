@@ -1,7 +1,4 @@
 class PetHistory < ApplicationRecord
     belongs_to :pet
-    
-    def pet_names
-        pets.pluck(:name)
-    end
+    delegate :name, to: :pet, prefix: true
 end

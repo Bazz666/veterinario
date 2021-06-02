@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2021_06_02_054946) do
     t.string "name"
     t.integer "telephone"
     t.string "email"
-    t.bigint "pet_id"
-    t.index ["pet_id"], name: "index_clients_on_pet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pet_histories", force: :cascade do |t|
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2021_06_02_054946) do
     t.index ["client_id"], name: "index_pets_on_client_id"
   end
 
-  add_foreign_key "clients", "pets"
+
   add_foreign_key "pet_histories", "pets"
   add_foreign_key "pets", "clients"
 end
