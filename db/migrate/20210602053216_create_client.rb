@@ -3,7 +3,7 @@ class CreateClient < ActiveRecord::Migration[5.2]
     create_table :clients do |t|
       t.string :name
       t.integer :telephone
-      t.email :email
+      t.string :email
       t.references :pet, foreign_key: true
     end
   end

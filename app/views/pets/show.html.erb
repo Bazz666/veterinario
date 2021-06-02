@@ -30,10 +30,11 @@
 
   <tbody>
     <tr>
-        <td><%= @pet.avg_weight %></td>
-        <td><%= @pet.avg_height %></td>
+        <td><%= @pet.average_weight %></td>
+        <td><%= @pet.average_height %></td>
         <td><%= @pet.max_weight %></td>
         <td><%= @pet.max_height%></td>
+
         <% @pet.pet_histories.each do |history|%>
           <td><%= history.weigth%></td>
           <td><%= history.height%></td>

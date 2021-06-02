@@ -7,12 +7,12 @@ class Pet < ApplicationRecord
     pet_histories.count
   end
 
-  def avg_weight
+  def average_weight
     pet_histories.average(:weight)
   end
 
   
-  def avg_height
+  def average_height
     pet_histories.average(:height)
   end
 
